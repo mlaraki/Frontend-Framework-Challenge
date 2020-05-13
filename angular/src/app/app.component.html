@@ -1,0 +1,16 @@
+<nav>
+  <span *ngIf="getCurrentRoute() == '/'; else Home">Home</span>
+  <ng-template #Home>
+    <a routerLink="/" routerLinkActive="active">Home</a>
+  </ng-template>
+  /
+  <span *ngIf="getCurrentRoute() == '/favorites'; else Fav">Favorites</span>
+  <ng-template #Fav>
+    <a routerLink="/favorites" routerLinkActive="active">Favorites</a>
+  </ng-template>
+</nav>
+<img *ngIf="getCurrentRoute() == '/'; else Title" class="logo" src="../assets/logo.png" alt="logo" />
+<ng-template #Title>
+  <h1 class="center-text">Favorites</h1>
+</ng-template>
+<router-outlet></router-outlet>

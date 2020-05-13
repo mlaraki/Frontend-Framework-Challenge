@@ -1,0 +1,18 @@
+<form id="form" (ngSubmit)="handleFormSubmit()">
+  <label for="searchTerm">Search an image</label>
+  <input [(ngModel)]="searchTerm" class="u-full-width" type="text" id="searchTerm" name="searchTerm">
+  <button type="submit" class="center-el">Search</button>
+</form>
+<img *ngIf="loading" class="loader" src="../../assets/loading.svg" alt="loading" />
+<section *ngIf="images.length > 0 && !loading; else NoResult" class="images" id="section-images">
+  <div *ngFor="let img of images" class="img-container">
+    <img [src]="img.webformatURL" [alt]="searchTerm" />
+    <i *ngIf="isFavorite(img); else NotFavorite" (click)="removeFromFavorites(img)" class="fas fa-star favs filled"></i>
+    <ng-template #NotFavorite>
+      <i (click)="addToFavorites(img)" class="far fa-star favs empty"></i>
+    </ng-template>
+  </div>
+</section>
+<ng-template #NoResult>
+  <p *ngIf="formSubmitted && !loading">No images found</p>
+</ng-template>

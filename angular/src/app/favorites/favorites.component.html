@@ -1,0 +1,9 @@
+<section *ngIf="favorites.length > 0; else NoResult" class="images" id="section-images">
+	<div *ngFor="let img of favorites" class="img-container">
+	  <img [src]="img.url" alt="" />
+	  <i (click)="removeFromFavorites(img)" class="fas fa-star favs filled"></i>
+	</div>
+  </section>
+  <ng-template #NoResult>
+	<p>No favorites yet</p>
+  </ng-template>
