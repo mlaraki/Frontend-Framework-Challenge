@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <title>Svelte</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/2ae8632d32.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="stylesheet" href="/build/bundle.css" />
+
+    <script defer src="/build/bundle.js"></script>
+  </head>
+
+  <body></body>
+</html>
+
+<style>
+  body {
+    width: 80%;
+    margin: 2em auto 0 auto;
+  }
+
+  .logo {
+	width : 100px;
+	display: block;
+	margin : auto auto;
+}
+
+  .center-text {
+    text-align: center;
+  }
+
+  .images {
+    column-count: 3;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .img-container {
+    position: relative;
+  }
+
+  .favs {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+  }
+
+  .filled {
+    color: #f9f903;
+  }
+
+  .empty {
+    color: black;
+  }
+
+
+  @media (max-width: 1200px) {
+    .images {
+      column-count: 2;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .images {
+      column-count: 1;
+    }
+  }
+</style>
