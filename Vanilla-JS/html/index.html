@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Vanilla-JS</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+	<script src="https://kit.fontawesome.com/2ae8632d32.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="../css/styles.css">
+
+</head>
+
+<body>
+	<span><span>Home</span> / <a href="../html/favorites.html">Favorites</a> </span>
+	<div id="logo-container">
+		<img class="logo" src="../assets/logo.png"/>
+	</div>
+	<form id="form">
+		<label for="searchTerm">Search an image</label>
+		<input class="u-full-width" type="text" id="searchTerm" name="searchTerm">
+		<button type="submit">Search</button>
+	</form>
+	<div id="loading-image" style="display : none">
+		<img class="loader" src="../assets/loading.svg" alt="loading"/>
+	</div>
+	<section class="images" id="section-images">
+		<!-- images loaded dynamically here -->
+	</section>
+	<script src="../js/index.js"></script>
+</body>
+</html>
