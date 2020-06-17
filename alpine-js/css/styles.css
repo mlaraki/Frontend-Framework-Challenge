@@ -1,0 +1,59 @@
+body {
+	width: 80%;
+	margin: 2em auto 0 auto;
+}
+
+.center-text {
+	text-align: center;
+}
+
+.loader {
+	width : 100px;
+	margin : auto auto;
+	display: block;
+}
+
+.logo {
+	width : 100px;
+	display: block;
+	margin : auto auto;
+}
+
+.images {
+	column-count: 3;
+}
+
+img {
+	width: 100%;
+}
+
+.img-container {
+	position: relative;
+}
+
+.favs {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+}
+
+.filled {
+	color: #f9f903;
+}
+
+.empty {
+	color: black;
+}
+
+@media (max-width: 1200px) {
+	.images {
+		column-count: 2;
+	}
+}
+
+@media (max-width: 800px) {
+	.images {
+		column-count: 1;
+	}
+}
